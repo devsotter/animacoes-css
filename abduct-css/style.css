@@ -9,17 +9,20 @@ body {
   font-family: "DotGothic16", sans-serif;
 }
 
+.centro {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
 .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .cena {
   width: 250px;
   height: 400px;
-  display: flex;
   animation: 1s float infinite;
 }
 
