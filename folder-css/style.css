@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Long+Cang&display=swap");
+
+body {
+  transform: scale(0.9);
+  background: #e5e5e5;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cena:hover img {
+  transform: translatey(-110px);
+  box-shadow: 5px 5px 5px #2c2c2c;
+}
+
+.cena {
+  margin-left: 30px;
+  margin-bottom: -60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+}
+
+img {
+  top: 80px;
+  left: 33px;
+  display: block;
+  position: absolute;
+  width: 248px;
+  height: 190px;
+  transition: 0.6s cubic-bezier(0.5, 0.2, 0.3, 1.6);
+}
+img:hover {
+  transform: translatey(-110px);
+  box-shadow: 5px 5px 5px black;
+  z-index: 1;
+}
+
+p {
+  font-family: sans;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Long Cang", cursive;
+}
+
+.atras {
+  margin-right: 30px;
+  position: absolute;
+  width: 255px;
+  height: 205px;
+  background: #343436;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.atras::before {
+  bottom: 204px;
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  background: #343436;
+  border-top-right-radius: 10px;
+}
+
+.frente {
+  position: relative;
+  margin: 40px 65px 0px 0px;
+  width: 255px;
+  height: 205px;
+  background: #fdef52;
+  box-shadow: 3px 3px 3px black;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.frente::before {
+  bottom: 204px;
+  content: "James Webb";
+  text-indent: 3px;
+  font-family: "Long Cang", cursive;
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  background: #fdef52;
+  border-top-right-radius: 10px;
+}
