@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
+
+/*definições gerais*/
+
+* {
+  font-family: "Londrina Outline", cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background: rgb(10, 121, 209);
+  background: linear-gradient(
+    0deg,
+    rgba(10, 121, 209, 1) 42%,
+    rgba(31, 179, 255, 1) 49%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.cena {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+/*sombra*/
+.cena::before {
+  position: absolute;
+  content: "";
+  width: 140px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 15px black;
+  opacity: 0.5;
+  bottom: -155px;
+  right: -70px;
+
+  /*detalhes da laranja*/
+}
+.laranja {
+  background: rgb(255, 188, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 188, 0, 1) 0%,
+    rgba(235, 106, 0, 1) 100%
+  );
+  right: -100px;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 100% 100% 85%;
+  box-shadow: 1px 0px 1px black;
+  border: 1px black;
+}
+
+.laranja::after {
+  position: absolute;
+  content: "";
+  height: 80px;
+  width: 10px;
+  background: rgb(78, 48, 9);
+  right: 25px;
+  top: -45px;
+  transform: rotate(35deg) skewy(45deg);
+  border-radius: 10px;
+  box-shadow: 0.5px 0px 0px black;
+}
+
+.laranja::before {
+  position: absolute;
+  content: "";
+  height: 80px;
+  width: 80px;
+  background-image: linear-gradient(to right, green, #40f30a);
+  right: -95px;
+  top: -26px;
+  transform: rotate(130deg) skewy(40deg);
+  border-radius: 1% 200% 1% 100%;
+  box-shadow: 2px 0px 1px black;
+}
+
+.bolinhas {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background: #eb6a00;
+  right: 55px;
+  top: -5px;
+  border-radius: 100%;
+}
+.bolinhas::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background: #eb6a00;
+  left: 20px;
+  top: -25px;
+  border-radius: 100%;
+}
+.bolinhas::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background: #eb6a00;
+  left: -10px;
+  top: -25px;
+  border-radius: 100%;
+}
+/*animação 3D*/
+
+.cena .texto {
+  transform-style: preserve-3d;
+  animation: animate 15s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotateY(360deg);
+  }
+
+  /*texto*/
+}
+.texto span {
+  text-shadow: 0 0 2px orange;
+  position: absolute;
+  font-size: 25px;
+  color: white;
+  background: hidden;
+  text-transform: uppercase;
+  font-weight: bold;
+  transform-style: preserve-3d;
+  transform: rotatey(calc(var(--i) * calc(360deg / 16))) translatez(120px);
+}
