@@ -1,0 +1,82 @@
+/*definições gerais*/
+* {
+  font-family: "Nothing You Could Do", cursive;
+}
+body {
+  background: #131417;
+  padding-right: 174px;
+}
+.centro {
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cena {
+  filter: opacity(80%);
+  width: 400px;
+  height: 500px;
+  position: relative;
+  padding-top: 15px;
+  padding-left: 174px;
+}
+
+/*autor e título*/
+.titulo {
+  position: relative;
+  top: 13px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+}
+.autor {
+  display: flex;
+  justify-content: end;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+/*corpo de texto/poema*/
+p {
+  text-indent: 10px;
+  padding-top: 9.8px;
+  font-size: 13px;
+  margin-top: -2px;
+  text-align: center;
+  line-height: 4.2px;
+}
+/*estilo do papel/dobra/sombra*/
+.papel {
+  position: absolute;
+  box-shadow: 10px 10px 2px black;
+  color: #000080;
+  width: 390px;
+  height: 490px;
+  background: repeating-conic-gradient(white 0deg, #b4b4b4b4 90deg);
+}
+/*picote lateral do papel*/
+.furo {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #131417;
+  border-radius: 50%;
+  left: 165px;
+  top: 22px;
+  border-right: 5px solid transparent;
+  box-shadow: 0px 0px 0px 0px #131417, 0px 30px 0px 1px #131417,
+    0px 60px 0px 0px #131417, 0px 90px 0px 0px #131417,
+    0px 120px 0px 0px #131417, 0px 150px 0px 0px #131417,
+    0px 180px 0px 0px #131417, 0px 210px 0px 0px #131417,
+    0px 240px 0px 0px #131417, 0px 270px 0px 0px #131417,
+    0px 300px 0px 0px #131417, 0px 330px 0px 0px #131417,
+    0px 360px 0px 0px #131417, 0px 390px 0px 0px #131417,
+    0px 420px 0px 0px #131417, 0px 455px 0px 0px #131417,
+    0px 60px 0px 0px #131417;
+}
